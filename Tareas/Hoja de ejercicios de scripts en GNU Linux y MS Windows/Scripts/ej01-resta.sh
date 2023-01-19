@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 
 ###################
 #
@@ -11,3 +11,10 @@
 
 Valor1=$1
 Valor2=$2
+
+if [ $# -ne 2 ]
+then
+	echo "Debe introducir 2 argumentos."
+else
+	echo "El resultado de la operación es $1 - $2 =" $(bc <<< "$1-$2").
+fi
