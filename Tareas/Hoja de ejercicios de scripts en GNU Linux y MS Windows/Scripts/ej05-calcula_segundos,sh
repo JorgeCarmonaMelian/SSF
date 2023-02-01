@@ -1,0 +1,19 @@
+#!/bin/bash
+
+###################
+#
+# Titulo: ej01-resta.sh
+# Descripcion: Obtiene 2 argumentos y los resta.
+#
+# Autor: Jorge Carmona Melian.
+#
+###################
+
+dias=$1
+horas=$2
+minutos=$3
+segundos=$4
+
+total=$(bc <<< "($dias*86400)+($horas*3600)+($minutos*60)+$segundos")
+
+echo "$dias días $horas horas $minutos minutos $segundos segundos son $total segundos."
